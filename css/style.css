@@ -46,11 +46,11 @@ body {
   animation: slideDown 1s ease-in-out 2.8s forwards;
 }
 .wrapper div {
-  opacity: 0;
   color: #ffffff;
   font-size: 6rem;
   font-weight: 900;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 0;
   flex: 1;
   display: flex;
   margin: 5%;
@@ -61,17 +61,6 @@ body {
   content: "";
   display: block;
   padding-bottom: 100%;
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-500%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
