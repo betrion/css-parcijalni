@@ -10,23 +10,21 @@
   @for $i from 1 through length($box-colors) {
     $color: nth($box-colors, $i);
     $color-value: nth($color, 2);
+    $delay: ($i + 1) * 0.7s; //prvi delay malo veci da se slika ucita
 
     div:nth-child(#{$i}) {
       @include box-definition(35%, $color-value);
+      animation: slideDown
+        1s
+        ease-in-out
+        $delay
+        forwards; // Add delay to animation
     }
   }
 
   div {
+    opacity: 0;
     @include text;
-    @include keyframes(slideDown) {
-      0% {
-        margin-top: -100%;
-      }
-      100% {
-        margin-top: 5%;
-      }
-    }
-    @include animate(slideDown, 2s, linear, 1, 3s);
 
     flex: 1;
     display: flex;
@@ -39,5 +37,16 @@
       display: block;
       padding-bottom: 100%;
     }
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }

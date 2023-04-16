@@ -1,8 +1,8 @@
 $border-color: #f4f4f4;
 $text-color: #ffffff;
 $box-colors: (
-  red: rgba(255, 0, 0, 0.4),
   green: rgba(0, 255, 0, 0.4),
+  red: rgba(255, 0, 0, 0.4),
   blue: rgba(0, 0, 255, 0.4),
 );
 
@@ -10,7 +10,7 @@ $box-colors: (
   color: $text-color;
   font-size: 6rem;
   font-weight: 900;
-  font-family: "sans-serif";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @mixin box-definition($width, $boxcolor) {
@@ -19,12 +19,13 @@ $box-colors: (
   background-color: $boxcolor;
 }
 
-@mixin animate($animation, $duration, $method, $times, $delay) {
-  animation: $animation $duration $method $times;
-  animation-delay: $delay;
-}
-@mixin keyframes($name) {
-  @keyframes #{$name} {
-    @content;
+@keyframes slideDown {
+  0% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
