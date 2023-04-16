@@ -1,1 +1,35 @@
-@import "_reset.scss";
+@import "reset";
+@import "mixins";
+
+$border-color: #f4f4f4;
+$text-color: #ffffff;
+$box-colors: (
+  red: rgba(255, 0, 0, 0.4),
+  green: rgba(0, 255, 0, 0.4),
+  blue: rgba(0, 0, 255, 0.4),
+);
+.wrapper {
+  display: flex;
+  width: 100% - 10%;
+  // height: 100vh;
+  align-items: center;
+
+  // justify-content: space-evenly;
+
+  //boxevi
+  div {
+    @include box-definition(35%, map-get($box-colors, red));
+    @include text;
+    flex: 1;
+    display: flex;
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}

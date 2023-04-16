@@ -1,0 +1,12 @@
+@mixin text {
+  color: $text-color;
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "sans-serif";
+}
+
+@mixin box-definition($width, $boxcolor) {
+  width: $width;
+  border: 2px solid $border-color;
+  background-color: $boxcolor;
+}
