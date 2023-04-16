@@ -4,4 +4,37 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  background: url("https://source.unsplash.com/1600x900/?dark") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+.wrapper div {
+  width: 35%;
+  border: 2px solid #f4f4f4;
+  background-color: rgba(255, 0, 0, 0.4);
+  color: #ffffff;
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "sans-serif";
+  flex: 1;
+  display: flex;
+  margin: 5%;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper div::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
